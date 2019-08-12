@@ -1,0 +1,108 @@
+ôù≤oô{"class_name": "Model", "config": {"input_layers": [["input_1", 0, 0]], "layers": [{"class_name": "InputLayer", "config": {"batch_input_shape": [null, 84, 84, 4], "dtype": "float32", "name": "input_1", "sparse": false}, "inbound_nodes": [], "name": "input_1"}, {"class_name": "Conv2D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1, 1], "dtype": "float32", "filters": 32, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "kernel_size": [9, 9], "name": "layer1", "padding": "same", "strides": [4, 4], "trainable": true, "use_bias": true}, "inbound_nodes": [[["input_1", 0, 0, {}]]], "name": "layer1"}, {"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation", "trainable": true}, "inbound_nodes": [[["layer1", 0, 0, {}]]], "name": "activation"}, {"class_name": "Conv2D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1, 1], "dtype": "float32", "filters": 64, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "kernel_size": [3, 3], "name": "layer2", "padding": "same", "strides": [2, 2], "trainable": true, "use_bias": true}, "inbound_nodes": [[["activation", 0, 0, {}]]], "name": "layer2"}, {"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_1", "trainable": true}, "inbound_nodes": [[["layer2", 0, 0, {}]]], "name": "activation_1"}, {"class_name": "Flatten", "config": {"data_format": "channels_last", "dtype": "float32", "name": "flatten", "trainable": true}, "inbound_nodes": [[["activation_1", 0, 0, {}]]], "name": "flatten"}, {"class_name": "Dense", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "dtype": "float32", "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "name": "dense_layer1", "trainable": true, "units": 512, "use_bias": true}, "inbound_nodes": [[["flatten", 0, 0, {}]]], "name": "dense_layer1"}, {"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_2", "trainable": true}, "inbound_nodes": [[["dense_layer1", 0, 0, {}]]], "name": "activation_2"}, {"class_name": "Dense", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "dtype": "float32", "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "name": "dense_layer2", "trainable": true, "units": 6, "use_bias": true}, "inbound_nodes": [[["activation_2", 0, 0, {}]]], "name": "dense_layer2"}], "name": "model", "output_layers": [["dense_layer2", 0, 0]]}}àﬂ√¿d{"class_name": "InputLayer", "config": {"batch_input_shape": [null, 84, 84, 4], "dtype": "float32", "name": "input_1", "sparse": false}}ÁÔØ[w{"class_name": "Conv2D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1, 1], "dtype": "float32", "filters": 32, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "kernel_size": [9, 9], "name": "layer1", "padding": "same", "strides": [4, 4], "trainable": true, "use_bias": true}}{§~Y{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation", "trainable": true}}ÁÔØ[w{"class_name": "Conv2D", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "data_format": "channels_last", "dilation_rate": [1, 1], "dtype": "float32", "filters": 64, "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "kernel_size": [3, 3], "name": "layer2", "padding": "same", "strides": [2, 2], "trainable": true, "use_bias": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_1", "trainable": true}}`P˜w{"class_name": "Flatten", "config": {"data_format": "channels_last", "dtype": "float32", "name": "flatten", "trainable": true}}ı‰ºÖ{"class_name": "Dense", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "dtype": "float32", "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "name": "dense_layer1", "trainable": true, "units": 512, "use_bias": true}}}˙4{"class_name": "Activation", "config": {"activation": "relu", "dtype": "float32", "name": "activation_2", "trainable": true}}Û^{_j{"class_name": "Dense", "config": {"activation": "linear", "activity_regularizer": null, "bias_constraint": null, "bias_initializer": {"class_name": "Zeros", "config": {"dtype": "float32"}}, "bias_regularizer": null, "dtype": "float32", "kernel_constraint": null, "kernel_initializer": {"class_name": "RandomUniform", "config": {"dtype": "float32", "maxval": 0.05, "minval": -0.05, "seed": null}}, "kernel_regularizer": null, "name": "dense_layer2", "trainable": true, "units": 6, "use_bias": true}}ù#û◊ªÎ
+•
+layer-0
+layer_with_weights-0
+layer-1
+layer-2
+layer_with_weights-1
+layer-3
+layer-4
+layer-5
+layer_with_weights-2
+layer-6
+layer-7
+	layer_with_weights-3
+	layer-8
+
+	optimizer7
+OBJECT_CONFIG_JSON/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+@>
+OBJECT_CONFIG_JSON&layer-0/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+c
+
+kernel
+biasK
+OBJECT_CONFIG_JSON3layer_with_weights-0/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+@>
+OBJECT_CONFIG_JSON&layer-2/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+c
+
+kernel
+biasK
+OBJECT_CONFIG_JSON3layer_with_weights-1/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+@>
+OBJECT_CONFIG_JSON&layer-4/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+@>
+OBJECT_CONFIG_JSON&layer-5/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+c
+
+kernel
+biasK
+OBJECT_CONFIG_JSON3layer_with_weights-2/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+@>
+OBJECT_CONFIG_JSON&layer-7/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+c
+
+kernel
+biasK
+OBJECT_CONFIG_JSON3layer_with_weights-3/.ATTRIBUTES/OBJECT_CONFIG_JSON 
+ 
+	optimizer
+global_step
+YW
+VARIABLE_VALUElayer1/kernel6layer_with_weights-0/kernel/.ATTRIBUTES/VARIABLE_VALUE
+US
+VARIABLE_VALUElayer1/bias4layer_with_weights-0/bias/.ATTRIBUTES/VARIABLE_VALUE
+YW
+VARIABLE_VALUElayer2/kernel6layer_with_weights-1/kernel/.ATTRIBUTES/VARIABLE_VALUE
+US
+VARIABLE_VALUElayer2/bias4layer_with_weights-1/bias/.ATTRIBUTES/VARIABLE_VALUE
+_]
+VARIABLE_VALUEdense_layer1/kernel6layer_with_weights-2/kernel/.ATTRIBUTES/VARIABLE_VALUE
+[Y
+VARIABLE_VALUEdense_layer1/bias4layer_with_weights-2/bias/.ATTRIBUTES/VARIABLE_VALUE
+_]
+VARIABLE_VALUEdense_layer2/kernel6layer_with_weights-3/kernel/.ATTRIBUTES/VARIABLE_VALUE
+[Y
+VARIABLE_VALUEdense_layer2/bias4layer_with_weights-3/bias/.ATTRIBUTES/VARIABLE_VALUE
+≤
+beta1_power
+beta2_powermmmmmmmmvv v!v"v#v$v%v&
+\Z
+VARIABLE_VALUETFOptimizer/iterations0optimizer/global_step/.ATTRIBUTES/VARIABLE_VALUE
+pn
+VARIABLE_VALUE training/TFOptimizer/beta1_power:optimizer/optimizer/beta1_power/.ATTRIBUTES/VARIABLE_VALUE
+pn
+VARIABLE_VALUE training/TFOptimizer/beta2_power:optimizer/optimizer/beta2_power/.ATTRIBUTES/VARIABLE_VALUE
+ÖÇ
+VARIABLE_VALUElayer1/kernel/Adam\layer_with_weights-0/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+Ä~
+VARIABLE_VALUElayer1/bias/AdamZlayer_with_weights-0/bias/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+ÖÇ
+VARIABLE_VALUElayer2/kernel/Adam\layer_with_weights-1/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+Ä~
+VARIABLE_VALUElayer2/bias/AdamZlayer_with_weights-1/bias/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+ãà
+VARIABLE_VALUEdense_layer1/kernel/Adam\layer_with_weights-2/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+áÑ
+VARIABLE_VALUEdense_layer1/bias/AdamZlayer_with_weights-2/bias/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+ãà
+VARIABLE_VALUEdense_layer2/kernel/Adam\layer_with_weights-3/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+áÑ
+VARIABLE_VALUEdense_layer2/bias/AdamZlayer_with_weights-3/bias/.OPTIMIZER_SLOT/optimizer/optimizer/m/.ATTRIBUTES/VARIABLE_VALUE
+áÑ
+VARIABLE_VALUElayer1/kernel/Adam_1\layer_with_weights-0/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+ÉÄ
+VARIABLE_VALUElayer1/bias/Adam_1Zlayer_with_weights-0/bias/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+áÑ
+VARIABLE_VALUElayer2/kernel/Adam_1\layer_with_weights-1/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+ÉÄ
+VARIABLE_VALUElayer2/bias/Adam_1Zlayer_with_weights-1/bias/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+çä
+VARIABLE_VALUEdense_layer1/kernel/Adam_1\layer_with_weights-2/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+âÜ
+VARIABLE_VALUEdense_layer1/bias/Adam_1Zlayer_with_weights-2/bias/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+çä
+VARIABLE_VALUEdense_layer2/kernel/Adam_1\layer_with_weights-3/kernel/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
+âÜ
+VARIABLE_VALUEdense_layer2/bias/Adam_1Zlayer_with_weights-3/bias/.OPTIMIZER_SLOT/optimizer/optimizer/v/.ATTRIBUTES/VARIABLE_VALUE
